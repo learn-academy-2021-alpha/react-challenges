@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
-import Colors from './components/colors'
+import Colors from './Colors'
+
 class App extends Component{
   constructor(props){
     super(props)
@@ -8,6 +9,7 @@ class App extends Component{
     }
   }
   render(){
+    return(
     <>
       <div style="width:500px;height:100px;border:1px solid #000;">
         
@@ -17,15 +19,7 @@ class App extends Component{
      
 
    </>
+    )
   }
 }
-
-
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
 export default App;
