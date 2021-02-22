@@ -8,6 +8,7 @@ class App extends Component {
       <>
       <div>
         <h2>Colors</h2>
+        <div class = "box">box</div>
         <Colors />
       </div>
       </>
