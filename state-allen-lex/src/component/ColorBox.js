@@ -37,6 +37,7 @@ constructor(props){
       <>
         <div className="rectangle" onClick={this.handleClick}
         style={{backgroundColor: this.state.color}}> {this.state.color} </div>
+        <button></button>
       </>
     )
   }
