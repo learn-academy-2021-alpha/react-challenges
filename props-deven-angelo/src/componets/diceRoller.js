@@ -11,23 +11,15 @@ class RollTheDice extends Component {
   getDiceNumber = () => {
     const newDiceNumber = this.rollingDice
   }
-//   render()
-//     return(
-//       <div>
-//         <h1> roll the dice! </h1>
-//       </div>
-//     )
-//   }
-// }
-
 
 render(){
   return(
-  <RollTheDice
-    number = {
-      this.state.diceRoll[this.state.currentRoll]
-    }
-
+    <div>
+    <p> your roll is {this.state.diceNumber}!</p>
+    <button onClick = {this.getDiceNumber}/>
+     Roll the dice!
+     </button>
+    </div>
+  }
 }
-
 export default RollTheDice

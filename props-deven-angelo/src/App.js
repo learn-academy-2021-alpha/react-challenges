@@ -21,11 +21,11 @@ render() {
     <div className="App">
     roll the dice!
     {
-      this.state.diceRoll[this.state.currentRoll.map(diceRoll, index) => {
-        return < RollTheDice number = {diceRoll}
+      this.state.currentRoll.map(diceRoll, index) => {
+        return <RollTheDice number = {diceRoll}
                             key = {index}
                             diceAction = {this.rollingDice}/>
-      }]
+      })
     }
     </div>
     );
