@@ -4,25 +4,45 @@ import Rolls from './components/Rolls'
 import './App.css';
 
 class App extends Component {
-  constructor () {
-super()
+  constructor (props) {
+    super(props)
 this.state = {
-  rolls: [],
-  reset: 0
+  rolls: [
+    "0",
+  ],
+  // rolls: [],
+  // numberOfDice: undefined,
+  // rollSum: null,
 }
   }
-  Randomizer () {
-    this.state.rolls.push(math.cell(math.random *6 ))
+  randomizer () {
+    return Math.floor(Math.random()*6);
+    // this.setState({
+    //   numberOfDice,
+    //   rolls,
+    //   rollSum
+    // }
+  };
+
+  saveNumber () {
+    return this.randomizer(this.state.rolls)
   }
- 
+// we want a function that returns the previous results and saves the results of our random number generator
+
  
  render () {
     return (
     <div>
+      { this.state.rolls.map((number, index) => {
+      return <Dice 
+            dicenumber = { number } 
+            key={index}
+            randomNumber= {this.randomizer} 
+        /> }
+       )} 
       
-
-      <Dice />
       <Rolls/>
+          <p>{this.saveNumber}</p>
     </div>
   )};
 }
