@@ -10,7 +10,7 @@ class Dice extends Component{
 
 getDiceRollResult = () => {
 //   console.log("box was clicked")
-  const newResult = this.props.rollFunction();
+  this.props.rollFunction();
   console.log(this.props.rollResult)
 //   this.setState({result: this.props.rollResult})
 }
