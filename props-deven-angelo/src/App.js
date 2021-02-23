@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import RollTheDice from "./components/diceRoller";
+import RollTheDice from './components/diceRoller';
 
 class App extends Component {
   constructor(){
@@ -14,14 +14,14 @@ class App extends Component {
     let throwDice = Math.floor(Math.random() * this.state.diceRoll.length)
     this.setState({ currentRoll: throwDice })
   };
-}
 
-render() {
+
+render(){
   return(
     <div className="App">
     roll the dice!
     {
-      this.state.currentRoll.map(diceRoll, index) => {
+      this.state.currentRoll.map((diceRoll, index) => {
         return <RollTheDice number = {diceRoll}
                             key = {index}
                             diceAction = {this.rollingDice}/>
@@ -34,5 +34,5 @@ render() {
 export default App
 
 //create a function that will display an array of 6 random numbers and spit out those numbers
-//create an array of numbers 1-6 and spits one out ranoml
+//create an array of numbers 1-6 and spits one out ranomly
 //two child classes that that will inherits props for parents
