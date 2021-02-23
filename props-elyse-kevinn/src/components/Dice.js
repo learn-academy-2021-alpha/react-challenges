@@ -1,29 +1,23 @@
 import React, { Component } from 'react'
-import Rolls from './Rolls'
+
 
 
 class Dice extends Component {
-  constructor() {
-    super()
-    this.state = {
-      randomDiceNum: undefined
-    }
-  }
 
-  getRandomDice = () => {
-    const newDice = this.props.diceAction()
-    this.setState({randomDiceNum: newDice});
-  }
+
+  // getArray = () => {
+  //   const number = this.state.numberArray.push(this.randomDiceNum)
+  //   this.setState({numberArray: number})
+  // }
 
   render() {
     return (
       <>
         <h1>Dice</h1>
-        <button onClick={this.getRandomDice}>
+        <button onClick={this.props.getRandomDice}>
         Roll dice
         </button>
-        <p>{this.state.randomDiceNum}</p>
-        <Rolls logRolls={this.state.randomDiceNum} />
+        <p>{this.props.diceAction}</p>
       </>
     )
   }

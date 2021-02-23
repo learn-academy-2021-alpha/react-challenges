@@ -21,19 +21,26 @@ import Rolls from './components/Rolls'
 class App extends Component {
   constructor() {
     super()
-
+    this.state = {
+      randomDiceNum: undefined,
+      numberArray: []
+    }
   }
 
-getDiceRoll = () => {
-  return (Math.floor(Math.random() * 6) + 1);
-}
+  getRandomDice = () => {
+    const newDice = Math.floor(Math.random() * 6) + 1
+    // const newArray = this.state.numberArray.push(newDice)
+    this.setState({randomDiceNum: newDice, numberArray: [...this.state.numberArray, newDice]});
+  }
 
   render() {
+    console.log(this.state.numberArray);
     return (
       <>
         <h1>Dice Roller</h1>
         <Dice
-              diceAction={this.getDiceRoll} />
+              diceAction={this.state.randomDiceNum}
+              getRandomDice={this.getRandomDice}/>
       </>
     )
   }
