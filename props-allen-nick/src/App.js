@@ -8,20 +8,25 @@ class App extends Component{
   constructor(props){
     super(props)
     this.state = {
-      result: 0
+      result: undefined,
+      log: []
     }
   }
 
   rollDice = () => {
-    return Math.floor(Math.random() * 6)
+    let randomNum = Math.ceil(Math.random() * 6)
+    this.setState({ result: randomNum })
+    let currentLog = this.state.log
+    currentLog.push(randomNum)
+    this.setState({log: currentLog})
   }
 
   render() {
     return (
       <div className="App">
         <h1>Dice Roller</h1>
-        <Dice rollFunction={this.rollDice}/>
-        <Rolls />
+        <Dice rollFunction={this.rollDice} rollResult={this.state.result} />
+        <Rolls logOfResults={this.state.log} />
       </div>
     );
   }

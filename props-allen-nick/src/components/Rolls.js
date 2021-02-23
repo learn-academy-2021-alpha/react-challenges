@@ -1,14 +1,21 @@
 import React, { Component } from 'react';
 
 class Rolls extends Component{
-  render(){
-    return(
-      <div>
-        <h2>Rolls</h2>
-        
-      </div>
-    )
-  }
+    constructor() {
+        super();
+        this.state = {
+          results: undefined
+        }
+      }
+
+    render(){
+        return(
+        <div>
+            <h2>Rolls</h2>
+            <h3>{this.props.logOfResults}</h3>
+        </div>
+        )
+    }
 }
 
 export default Rolls
