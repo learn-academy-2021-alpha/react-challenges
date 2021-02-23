@@ -23,6 +23,7 @@ class Dice extends Component {
         Roll dice
         </button>
         <p>{this.state.randomDiceNum}</p>
+        <Rolls logRolls={this.state.randomDiceNum} />
       </>
     )
   }

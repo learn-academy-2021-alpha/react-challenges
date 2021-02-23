@@ -34,7 +34,6 @@ getDiceRoll = () => {
         <h1>Dice Roller</h1>
         <Dice
               diceAction={this.getDiceRoll} />
-        <Rolls />
       </>
     )
   }
