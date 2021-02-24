@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 // import logo from './logo.svg';
 import Menu from './components/Menu'
+import MenuNew from './components/MenuNew'
 import Order from './components/Order'
 import './App.css';
 
@@ -11,9 +12,16 @@ class App extends Component {
     constructor (props){
       super(props)
       this.state = {
-        burgers: ["Double-Double $3.45", "Cheeseburger $2.40", "Hamburger $2.10", "French Fries $1.60"],
+        burgers: ["Double-Double", "Cheeseburger", "Hamburger", "French Fries"],
         prices: ["3.45", "2.40", "2.10", "1.60"],
-        order: []
+        menuWithPrices: [
+          {type: "Double-Double", price: 3.45},
+          {type: "Cheeseburger", price: 2.40},
+          {type: "Hamburger", price: 2.10},
+          {type: "French Fries", price: 1.60}
+        ],
+        order: [],
+        total: 0
       }
     }
 
@@ -26,7 +34,18 @@ render () {
   return (
     <>
       <h1>Menu</h1>
-      <Menu burgers = { this.state.burgers } addToOrder = {this.addToOrder} />
+      <Menu burgers = { this.state.burgers } price = {this.prices} addToOrder = {this.addToOrder} />
+
+      <h1>Menu Stretch Goal</h1>
+      { this.state.menuWithPrices.map((item, index ) => {
+        return (
+            <li key= { index }>
+                <button onClick={ () => this.addToOrder(item.type) }> 
+                { item.type } { item.price }
+                </button>
+            </li>
+        )
+        })}
 
       <h1>Order</h1>
       <Order order = { this.state.order } />

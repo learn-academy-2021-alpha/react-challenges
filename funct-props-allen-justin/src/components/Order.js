@@ -4,13 +4,13 @@ class Order extends Component {
     render () {
         return (
             <>
-             { this.props.order.map((item, index) => {
-            return(
-              <li key= {index }>
-                { item } 
-            </li>
-            )
-         })}
+              { this.props.order.map((item, index) => {
+                return(
+                    <li key= {index }>
+                        { item } 
+                    </li>
+                )
+              })}
         </>
         )
     }

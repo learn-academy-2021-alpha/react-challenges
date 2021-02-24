@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-class Menu extends Component {
+class MenuNew extends Component {
     render () {
         return (
             <>
               <h1> In-N-Out </h1>
-                { this.props.burgers.map((item, index ) => {
+                { this.props.menuWithPrices.map((item, index ) => {
                 return (
                     <li key= { index }>
                         <button onClick={ () => this.props.addToOrder(item) }> 
@@ -19,4 +19,4 @@ class Menu extends Component {
     }
 }
 
-export default Menu
+export default MenuNew
