@@ -1,21 +1,39 @@
 import React, { Component } from "react";
-import GroceryItems from "./components/groceryitems.js";
+import GroceryItems from "./components/groceryitems";
+import GroceryCart from "./components/grocerycart";
+import TotalPrice from "./components/totalprice";
+
+
 class App extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
 			food: ["banana", "apple", "pineapple", "orange", "grapes"],
-			price: [1, 0.75, 2, 1.5, 0.25],
+			price: [1.00, 0.75, 2.00, 1.50, 0.25],
+			cart: [],
+			total: 0,
 		};
 	}
+
+addItemToCart = (newItem) => {
+	{this.setState({ cart: [...this.state.cart, newItem]})}
+}
+addPriceToTotal = (price) => {
+	{this.setState({ total: [...this.state.total + price]})}
+}
+
 	render() {
 		return (
 			<>
 				<h1>Food menu</h1>
 				<GroceryItems
 					food={this.state.food}
+					price={this.state.price}
 					addItemToCart={this.addItemToCart}
+					addPriceToTotal={this.addPriceToTotal}
 				/>
+				<TotalPrice price={this.state.total} />
+				<GroceryCart cart={this.state.cart} />
 			</>
 		);
 	}

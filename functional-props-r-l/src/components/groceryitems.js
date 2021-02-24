@@ -7,13 +7,11 @@ class GroceryItems extends Component {
 					{this.props.food.map((food, index) => {
 						return (
 							<li key={index}>
-								<button onClick={() => this.props.addItemToCart(food)}>
-									{" "}
-									{food}{" "}
-								</button>
+								<button onClick={() => this.props.addItemToCart(food), this.props.addPriceToTotal(this.props.price[index])}>{food} ${this.props.price[index]}</button>
 							</li>
 						);
 					})}
+
 				</ul>
 			</>
 		);
