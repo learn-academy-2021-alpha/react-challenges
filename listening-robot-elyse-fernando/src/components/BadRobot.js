@@ -10,7 +10,8 @@ class BadRobot extends Component {
     render() {
         return (
             <>
-            <p> Bad robot</p>
+            <h1> Bad robot</h1>
+            <p>Did you say "{ this.props.userSays }"????</p>
             </>
     )
 }

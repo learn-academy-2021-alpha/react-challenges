@@ -15,22 +15,24 @@ class App extends Component {
       console.log(e.target.value)
       this.setState ({userSays: e.target.value})
     }
-    
+
 
     render() {
       return (
         <>
        <input
         type= "text"
+        value={ this.state.userSays }
         onChange ={this.handleChange}/>
-        
-        <GoodRobots/>
-        
-        <BadRobot/>
-      
-        <RozBot/>
 
-       
+        <GoodRobots
+                  userSays= { this.state.userSays }/>
+
+        <BadRobot userSays= { this.state.userSays }/>
+
+        <RozBot userSays= { this.state.userSays }/>
+
+
         </>
 
         )
