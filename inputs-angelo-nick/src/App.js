@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import Goodrobot from './components/Goodrobot';
+import Badrobot from './components/Badrobot';
 import './App.css';
 
 
@@ -12,7 +14,7 @@ class App extends Component {
   }
 handleChange = (e) => {
   console.log(e.target.value)
-  this.setSate({ userInput: e.target.value });
+  this.setState({ userInput: e.target.value });
 }
 
   render(){
@@ -27,9 +29,10 @@ handleChange = (e) => {
       value={this.state.userInput}
       onChange={this.handleChange}
       />
-      <Goodrobot handleInput=""
+      <Goodrobot userInput={ this.state.userInput }/>
+      <Badrobot userInput={ this.state.userInput }/>
       </div>
-      <p>{ this.state.userInput }</p>
+      
     </>
   );
   }

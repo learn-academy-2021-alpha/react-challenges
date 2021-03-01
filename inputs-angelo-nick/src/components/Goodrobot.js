@@ -2,12 +2,16 @@ import React, { Component } from 'react'
 
 class Goodrobot extends Component {
 
-handleInput = () => {
-  return("")
-  // this.props.handleChange(this.props.index)
-}
+
   render(){
-    return
+    return(
+      <>
+      <div>
+      <h2>Good Robot</h2>
+      <p>I hear you saying { this.props.userInput }. Is that correct?</p>
+      </div>
+      </>
+    )
   }
 }
 
