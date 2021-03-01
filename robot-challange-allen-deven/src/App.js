@@ -2,6 +2,8 @@
 import React, { Component } from 'react'
 import './App.css'
 import GoodRobot from './components/GoodRobot'
+import BadRobot from './components/BadRobot'
+import LilJonBot from './components/LilJonBot'
 
 class App extends Component {
   constructor(props){
@@ -29,8 +31,11 @@ class App extends Component {
           value={ this.state.robotInput }
         />
         <GoodRobot 
-              robotInput={ this.state.robotInput}/>
-          
+          robotInput={ this.state.robotInput}/>
+        <BadRobot
+          robotInput={ this.state.robotInput}/>
+        <LilJonBot
+          robotInput={ this.state.robotInput}/>
       </>
     )
   }
