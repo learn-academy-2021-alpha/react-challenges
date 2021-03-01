@@ -15,24 +15,28 @@ class App extends Component {
   handleChange = (e) => {
     // console.log(e);
     // console.log(e.target);
-    // console.log(e.target.value);
-    
-    let bad = e.target.value;
-    bad = bad.replace(/./g,"bla") 
-    console.log(bad)
+    // console.log(e.target.value)
+
+    // let bad = e.target.value;
+    // bad = bad.replace(/./g,"bla") 
+    // console.log(bad)
     this.setState({ userInput: e.target.value,
-                    badInput:bad,
-                    kanyeInput: e.target.value })
+                  })
   }
 
-  // badRobot = (e) => {
-  //
-  //   this.setState({ badInput: e.target.value })
-  // }
-  //
-  // kanyeBot = (e) => {
-  //   this.setState({ kanyeInput: e.target.value })
-  // }
+  badRobot = (typed) => {
+    let badArray = typed.split('').map((value, index) => {
+      if (index % 3 === 0) {
+        return 'B'
+      } else if (index % 3 === 1) {
+        return 'L'
+      } else {
+        return 'A'
+      }
+    })
+    return badArray.join('')
+  }
+
 
   render() {
     console.log(this.state.userInput);
@@ -47,7 +51,7 @@ class App extends Component {
         <h3>Good Robot</h3>
         <p> I hear you saying { this.state.userInput }. Is that correct? </p>
         <h3>Bad Robot</h3>
-        <p> I hear you saying { this.state.badInput}. Is that correct? </p>
+        <p> I hear you saying { this.badRobot(this.state.userInput)}. Is that correct? </p>
         <h3>Learn bot</h3>
         <p> Imma let you finish, but Learn Academy is { this.state.userInput } </p>
       </>
