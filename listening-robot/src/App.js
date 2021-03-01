@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import GoodRobot from "./components/GoodRobot";
+import BadRobot from "./components/BadRobot";
+import SarahBot from "./components/SarahBot";
 import "./App.css";
 
 class App extends Component {
@@ -19,8 +21,10 @@ class App extends Component {
 		return (
 			<>
 				<h1>Listening robot</h1>
-				<input type='text' onChange={this.handleChange} />
+				<input type='text' onChange={this.handleChange} placeholder='FEED ME WORDS'/>
 				<GoodRobot userInput={this.state.userInput} />
+				<BadRobot userInput={this.state.userInput} />
+				<SarahBot userInput={this.state.userInput} />
 			</>
 		);
 	}

@@ -2,7 +2,12 @@ import React, { Component } from "react";
 
 class GoodRobot extends Component {
 	render() {
-		return <h3>working{this.props.userInput}</h3>;
+		return (
+			<>
+				<h2>Good Robot</h2>
+				<h3>I hear you saying {this.props.userInput}. Is that correct?</h3>
+			</>
+		)
 	}
 }
 
