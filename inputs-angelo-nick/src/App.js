@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Goodrobot from './components/Goodrobot';
 import Badrobot from './components/Badrobot';
+import Jacksparrowrobot from './components/Jacksparrowrobot';
 import './App.css';
 
 
@@ -23,7 +24,7 @@ handleChange = (e) => {
     <>
     <h1>Angelo & Nick's Robo Active Listening</h1>
     <div>
-    <p>say something</p>
+    <p className="paragraph">Say something...</p>
     <input
       type="text"
       value={this.state.userInput}
@@ -31,8 +32,8 @@ handleChange = (e) => {
       />
       <Goodrobot userInput={ this.state.userInput }/>
       <Badrobot userInput={ this.state.userInput }/>
+      <Jacksparrowrobot userInput={ this.state.userInput }/>
       </div>
-      
     </>
   );
   }

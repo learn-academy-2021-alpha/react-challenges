@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
+h1 {
+  color: silver;
+  text-shadow: 2px 2px black;
+  font-size: 25px;
+  margin-left: 37px;
+  margin-top: 50px
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  color: silver;
+  margin-left: 55px;
+  text-shadow: 1px 1px black;
+}
+.goodRobot2{
+  color: green;
+  margin-left: 55px;
+  font-size: 20px
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h2 {
+  margin-left: 55px;
+  margin-top: 40px
+}
+input {
+  margin-left: 55px
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.paragraph {
+  font-size: 20px;
+  font: bold;
+}
+.goodRobot {
+  color: green;
 }
 
-.App-link {
-  color: #61dafb;
+.badRobot{
+  color: red;
+}
+.badRobot2{
+  color:red;
+  margin-left: 55px;
+  font-size: 20px
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.jackSparrow {
+  color: blue;
+}
+
+.jackSparrow2{
+  color:blue;
+  margin-left: 55px;
+  font-size: 20px;
+}
+
+div{
+  width: 500px
+}
+
+body {
+  background-image: url("https://fcit.usf.edu/matrix/wp-content/uploads/2016/12/Robot-1.jpg");
 }
