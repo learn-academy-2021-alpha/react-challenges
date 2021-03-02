@@ -2,6 +2,9 @@
 import React, { Component } from 'react'
 import './App.css'
 import GoodRobot from './components/GoodRobot'
+import BadRobot from './components/BadRobot'
+import LilJonBot from './components/LilJonBot'
+import ReactPlayer from "react-player"
 
 class App extends Component {
   constructor(props){
@@ -22,15 +25,32 @@ class App extends Component {
     console.log(typeof this.state.robotInput)
     return (
       <>
-        <h1>Robot App</h1>
-        <input
+    
+        <h1>🤖 Robot App 🤖</h1>
+        <div className = "robotInput">
+        <input 
           type="text"
           onChange={ this.handleChange }
           value={ this.state.robotInput }
         />
         <GoodRobot 
-              robotInput={ this.state.robotInput}/>
-          
+          robotInput={ this.state.robotInput}/>
+        <BadRobot
+          robotInput={ this.state.robotInput}/>
+        <LilJonBot
+          robotInput={ this.state.robotInput}/>
+        </div>
+        <div className = "lilJonPlay">
+        <ReactPlayer
+        url="https://www.youtube.com/watch?v=gfmC-z5vmVw"/>
+      </div>
+      <div className = "transbox"> </div>
+      <div class="pyro">
+        <div class="before"></div>
+        <div class="after"></div>
+      </div>
+
+
       </>
     )
   }
