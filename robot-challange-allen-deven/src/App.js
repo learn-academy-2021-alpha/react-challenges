@@ -25,7 +25,10 @@ class App extends Component {
     console.log(typeof this.state.robotInput)
     return (
       <>
-    
+    <div className="pyro">
+        <div className="before"></div>
+
+      <div className = "transbox">
         <h1>🤖 Robot App 🤖</h1>
         <div className = "robotInput">
         <input 
@@ -43,11 +46,10 @@ class App extends Component {
         <div className = "lilJonPlay">
         <ReactPlayer
         url="https://www.youtube.com/watch?v=gfmC-z5vmVw"/>
+        </div>
       </div>
-      <div className = "transbox"> </div>
-      <div class="pyro">
-        <div class="before"></div>
-        <div class="after"></div>
+      
+        <div className="after"></div>
       </div>
 
 

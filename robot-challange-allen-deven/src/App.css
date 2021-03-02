@@ -1,8 +1,9 @@
 body {
-  background-repeat: no-repeat;
+  background-repeat: repeat-x;
   background-attachment: fixed;
   background-position: Center;
-  background: url('https://www.pngkit.com/png/detail/230-2304891_lil-jon-png-lil-jon-happy-birthday-meme.png')
+  background: url('https://www.pngkit.com/png/detail/230-2304891_lil-jon-png-lil-jon-happy-birthday-meme.png');
+  background-size: 800px;
 }
 h1 , p , input {
   text-align: center;
