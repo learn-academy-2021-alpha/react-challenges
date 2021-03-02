@@ -12,6 +12,12 @@ handleRoz = () => {
     if(index % 3 === 0){
       return "always"
     }
+    else if (index % 3 === 1){
+      return "watching"
+    }
+    else if (index % 3 === 2){
+      return "wizowski"
+    }
   }) .join(" ")
 }
 
@@ -21,7 +27,7 @@ handleRoz = () => {
     render() {
         return (
             <>
-              <h1> Rozbot</h1>
+              <h1> Rozbot:</h1>
               { this.handleRoz()}
             </>
     )

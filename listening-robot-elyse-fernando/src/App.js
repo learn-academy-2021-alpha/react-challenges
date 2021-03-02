@@ -20,19 +20,27 @@ class App extends Component {
     render() {
       return (
         <>
+        <header>
+        <h1>Protocol 2319</h1>
+        </header>
+       <body>
+        <div className = "box">
+        <div className ="pad">
+        <div id = "text">
        <input
         type= "text"
         value={ this.state.userSays }
         onChange ={this.handleChange}/>
-
+        </div>
         <GoodRobots
                   userSays= { this.state.userSays }/>
 
         <BadRobot userSays= { this.state.userSays }/>
 
         <RozBot userSays= { this.state.userSays }/>
-
-
+        </div>
+        </div>
+        </body>
         </>
 
         )
