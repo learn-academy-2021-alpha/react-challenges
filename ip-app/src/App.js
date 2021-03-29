@@ -7,7 +7,7 @@ class App extends Component {
       ip: ""
     }
   }
-
+// you can delete this pseudo code
   getIp = () => {
     fetch("https://ipapi.co/json/")
     .then(response => {
